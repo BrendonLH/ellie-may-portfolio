@@ -1,0 +1,15 @@
+<h1>Ellie facts list page</h1>
+{% load static %}
+
+{% block content %}
+<main>
+  <h1> Ellie Facts</h1>
+  <ul>
+    {% for fact in facts_objects %}
+          <li>
+              <a href="{% url 'fact_detail' fact.pk %}">{{ fact.name }}</a>
+          </li>
+    {% endfor %}
+  </ul>
+</main>
+{%  endblock content %}
