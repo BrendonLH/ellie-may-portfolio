@@ -12,6 +12,7 @@ class HomePageView(TemplateView):
 class FactListView(ListView):
     template_name = 'pages/ellie_fact_list.html'
     model = Fact
+    context_object_name = 'facts_objects'
 
 
 class FactDetailView(DetailView):

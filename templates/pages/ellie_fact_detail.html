@@ -1,1 +1,12 @@
-<h1>ellie fact detail page</h1>
+
+{% load static %}
+
+{% block content %}
+<main>
+  <h2>Why The Nickname: {{ fact.name }}</h2>
+  <p>{{ fact.reason }}</p>
+</main>
+
+
+
+{% endblock content %}

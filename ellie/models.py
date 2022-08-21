@@ -11,7 +11,7 @@ class Fact(models.Model):
     owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.reason
+        return self.name
 
     def get_absolute_url(self):
         return reverse('fact_detail', args=[str(self.id)])
