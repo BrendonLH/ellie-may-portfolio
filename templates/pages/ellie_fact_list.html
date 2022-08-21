@@ -1,15 +1,21 @@
-<h1>Ellie facts list page</h1>
+{% extends '_base.html' %}
 {% load static %}
 
 {% block content %}
-<main>
-  <h1> Ellie Facts</h1>
-  <ul>
-    {% for fact in facts_objects %}
-          <li>
-              <a href="{% url 'fact_detail' fact.pk %}">{{ fact.name }}</a>
-          </li>
-    {% endfor %}
-  </ul>
-</main>
+{% if user.is_authenticated %}
+        <main>
+          <h1> Ellie Facts</h1>
+          <ul>
+            {% for fact in facts_objects %}
+              <li>
+                  <a href="{% url 'fact_detail' fact.pk %}">{{ fact.name }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </main>
+     {% else %}
+        <h1>Please login!!</h1>
+    {% endif %}
+
 {%  endblock content %}
+
