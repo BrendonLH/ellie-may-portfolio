@@ -8,6 +8,15 @@
     <title>Ellie May Home</title>
 </head>
 <body>
-    <h1>Ellie May the Corgi Home</h1>
+    {% block content %}
+
+    {% if user.is_authenticated %}
+        <h1>Ellie May the Corgi Home</h1>
+     {% else %}
+        <h1>Please login!!</h1>
+    {% endif %}
+    {% endblock content %}
+
+
 </body>
 </html>
