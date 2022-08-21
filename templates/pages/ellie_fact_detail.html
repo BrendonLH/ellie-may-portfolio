@@ -1,10 +1,15 @@
-
+{% extends '_base.html' %}
 {% load static %}
 
 {% block content %}
 <main>
-  <h2>Why The Nickname: {{ fact.name }}</h2>
-  <p>{{ fact.reason }}</p>
+  <div class="card">
+    <img src="{% static 'images/ellie-laying.jpg' %}" alt="Avatar">
+    <div class="container">
+      <h4><b>{{ fact.name }}</b></h4>
+      <p>{{ fact.reason }}</p>
+    </div>
+  </div>
 </main>
 
 

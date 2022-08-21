@@ -1,0 +1,25 @@
+/* font styles */
+
+body {
+    font-family:cursive;
+}
+
+li {
+    list-style-type:None;
+}
+
+a {
+    color:#F89292;
+}
+
+a:hover {
+    color:#92C5F8;
+    text-decoration:none;
+}
+
+.fav-color{
+    color:#F89292;
+}
+.fav-color:nth-child(2) {
+    color:#92C5F8;
+}
