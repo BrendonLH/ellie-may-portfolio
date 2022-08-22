@@ -4,7 +4,7 @@
 {% block content %}
 <main>
   <div class="card">
-    <img src="{% static 'images/ellie-laying.jpg' %}" alt="Avatar">
+    <img src="{{ fact.image.url }}" alt="Avatar">
     <div class="container">
       <h4><b>{{ fact.name }}</b></h4>
       <p>{{ fact.reason }}</p>
