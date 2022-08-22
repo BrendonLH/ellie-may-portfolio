@@ -1,10 +1,9 @@
 {% extends '_base.html' %}
 {% load static %}
-
 {% block content %}
-{% if user.is_authenticated %}
-        <main>
-          <h1> Ellie Facts</h1>
+        <main class="main-centered">
+          <img class="facts-ellie" src="{% static 'images/Ellie.png' %}" alt="Avatar">
+        {% if user.is_authenticated %}
           <ul>
             {% for fact in facts_objects %}
               <li>
@@ -12,10 +11,11 @@
               </li>
             {% endfor %}
           </ul>
+        {% else %}
+        <h3>Please login to see all the cool ellie facts!!!</h3>
+        {% endif %}
         </main>
-     {% else %}
-        <h1>Please login!!</h1>
-    {% endif %}
+
 
 {%  endblock content %}
 

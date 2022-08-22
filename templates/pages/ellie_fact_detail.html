@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <main>
   <div class="card">
     <img src="{{ fact.image.url }}" alt="Avatar">
@@ -11,6 +12,9 @@
     </div>
   </div>
 </main>
+{% else %}
+        <h1>Please login to see the facts bout ellie!!!</h1>
+{% endif %}
 
 
 

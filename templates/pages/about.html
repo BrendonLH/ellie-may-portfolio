@@ -1,10 +1,11 @@
 {% extends '_base.html' %}
-
+{% load static %}
 {% block title %}About page{% endblock %}
 
 {% block content %}
-<main>
+<main class="main-centered">
     <h1>About Ellie May</h1>
+    <img id="about-ellie" src="{% static 'images/ellie-goofy.jpg' %}" alt="Avatar">
     <h3>Age: 11</h3>
     <h4>Favorite Color: <span class="fav-color">Pink</span> or <span class="fav-color">Blue</span></h4>
     <h4>Favorite Sport: Frisbee</h4>
