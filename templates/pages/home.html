@@ -11,15 +11,10 @@
 </head>
 <body>
     {% block content %}
-
-    {% if user.is_authenticated %}
         <main class="main-centered">
-            <h1>Ellie May the Corgi Home</h1>
+            <img class="facts-ellie" src="{% static 'images/Ellie.png' %}" alt="Avatar">
+            <img class="facts-ellie" src="{% static 'images/ellie-pup.jpg' %}" alt="Avatar">
         </main>
-
-     {% else %}
-        <h1>Please login!!</h1>
-    {% endif %}
     {% endblock content %}
 
 

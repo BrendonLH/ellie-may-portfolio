@@ -8,6 +8,7 @@ from django.urls import reverse
 class Fact(models.Model):
     name = models.CharField(max_length=50)
     reason = models.TextField(default=' ')
+    image = models.ImageField(upload_to='images', default='')
     owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
     def __str__(self):
